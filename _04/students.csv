@@ -1,3 +1,4 @@
-name,age,grade
-Alice,20,A
-Bob,19,B
+name,age,grade,date
+Alice,20,A,2025.09.20
+Bob,19,B,2025.09.21
+
