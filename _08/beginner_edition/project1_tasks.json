@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    {
+      "title": "Learn Serialization",
+      "description": "Complete Module 8 lessons",
+      "completed": true,
+      "created_at": "2026-01-23T15:04:33.311946+00:00",
+      "completed_at": "2026-01-23T15:04:33.312007+00:00"
+    },
+    {
+      "title": "Build Data Pipeline",
+      "description": "Practice with real data",
+      "completed": false,
+      "created_at": "2026-01-23T15:04:33.311964+00:00",
+      "completed_at": null
+    },
+    {
+      "title": "Code Review",
+      "description": "Review teammate's PR",
+      "completed": false,
+      "created_at": "2026-01-23T15:04:33.311972+00:00",
+      "completed_at": null
+    }
+  ],
+  "saved_at": "2026-01-23T15:04:33.312054+00:00"
+}

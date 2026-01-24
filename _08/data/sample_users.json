@@ -1,0 +1,37 @@
+[
+  {
+    "user_id": 1,
+    "email": "alice@example.com",
+    "city": "Kyiv",
+    "country": "Ukraine",
+    "zip": "01001"
+  },
+  {
+    "user_id": 2,
+    "email": "bob@example.com",
+    "city": "Lviv",
+    "country": "Ukraine",
+    "zip": "79000"
+  },
+  {
+    "user_id": 3,
+    "email": "charlie@example.com",
+    "city": "Warsaw",
+    "country": "Poland",
+    "zip": "00-001"
+  },
+  {
+    "user_id": 4,
+    "email": "diana@example.com",
+    "city": "Berlin",
+    "country": "Germany",
+    "zip": "10115"
+  },
+  {
+    "user_id": 5,
+    "email": "eve@example.com",
+    "city": "Prague",
+    "country": "Czech Republic",
+    "zip": "11000"
+  }
+]

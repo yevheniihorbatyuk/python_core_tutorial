@@ -20,7 +20,7 @@ _08/
 ├── 01_user_class_encapsulation.py
 ├── 02_pickle_serialization.py
 ├── 03_json_csv_serialization.py
-├── 04_copying_objects.py
+├── 04_copying_objects.**py**
 ├── 05_practice_tasks.py
 ├── START_HERE.md
 └── README.md

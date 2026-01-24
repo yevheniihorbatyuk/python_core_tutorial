@@ -1,0 +1,3 @@
+user_id,email,city,country,zip_code,created_at
+1,alice@example.com,Lviv,Ukraine,79000,2026-01-23T15:04:19.233466+00:00
+2,bob@example.com,Warsaw,Poland,00-001,2026-01-23T15:04:19.233469+00:00

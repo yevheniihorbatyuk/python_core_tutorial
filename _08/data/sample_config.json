@@ -1,0 +1,16 @@
+{
+  "app": {
+    "name": "DataPipeline",
+    "version": "1.0.0",
+    "environment": "development"
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "data_pipeline"
+  },
+  "serialization": {
+    "format": "json",
+    "compression": "gzip"
+  }
+}
