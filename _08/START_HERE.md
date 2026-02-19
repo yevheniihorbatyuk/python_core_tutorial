@@ -1,72 +1,39 @@
-# Module 8: Serialization and Object Copying
-# START HERE
+# START HERE: Модуль 8
 
-Welcome to Module 8. This module teaches how to **persist Python objects**, safely serialize data, and **copy complex structures** without bugs.
+## 1) Передумови
+- Базові теми по файлах/модулях
+- Базове розуміння ООП
 
----
+## 2) Оберіть primary route
+- Beginner: `beginner_edition/` (див. `docs/LEARNING_PATHS.md`)
+- Advanced: `advanced_edition/` (див. `docs/LEARNING_PATHS.md`)
 
-## ✅ Prerequisites
+## 3) Canonical docs
+- `docs/CONTENT_MAP.md`
+- `docs/LEARNING_PATHS.md`
+- `docs/TEACHING_FLOW.md`
 
-- Module 4 (files, JSON, CSV)
-- Module 6 (OOP basics)
-
----
-
-## 📂 Files in this module
-
-```
-_08/
-├── 00_lesson_plan.md
-├── 01_user_class_encapsulation.py
-├── 02_pickle_serialization.py
-├── 03_json_csv_serialization.py
-├── 04_copying_objects.**py**
-├── 05_practice_tasks.py
-├── START_HERE.md
-└── README.md
-```
-
----
-
-## 🚀 Quick Start
-
+## 4) Базовий запуск
 ```bash
-# From python_core/
-cd _08/
-
-# 1) Encapsulation and password handling
-python3 01_user_class_encapsulation.py
-
-# 2) Pickle serialization with getstate/setstate
-python3 02_pickle_serialization.py
-
-# 3) JSON + CSV serialization
-python3 03_json_csv_serialization.py
-
-# 4) Shallow vs deep copy
-python3 04_copying_objects.py
-
-# 5) Practice tasks
-python3 05_practice_tasks.py
+cd python_core/_08
+python3 beginner_edition/01_oop_encapsulation_basics.py
+python3 beginner_edition/02_pickle_basics.py
+python3 beginner_edition/03_json_csv_basics.py
+python3 beginner_edition/04_copying_basics.py
 ```
 
----
+## 5) Advanced запуск
+```bash
+python3 advanced_edition/01_modern_encapsulation.py
+python3 advanced_edition/02_pickle_production.py
+python3 advanced_edition/03_modern_serialization.py
+python3 advanced_edition/04_copying_performance.py
+python3 advanced_edition/05_pydantic_dataclasses.py
+python3 advanced_edition/06_practice_tasks_advanced.py
+```
 
-## 🧭 How to study this module
+## 6) Notebook
+- Primary: `Module_8_Complete_Guide.ipynb`
 
-1. Run each file and read the printed output.
-2. Pause and explain **why** the output looks that way.
-3. Modify examples (change fields, add nested data) and re-run.
-4. Solve tasks in `05_practice_tasks.py`.
-
----
-
-## ⚠️ Important Notes
-
-- **Pickle is unsafe for untrusted data.** Only load pickle from trusted sources.
-- JSON is **safe and interoperable**, but needs custom encoding for objects.
-- Copying mistakes cause **shared mutable state** bugs in production.
-
----
-
-If you only have 30 minutes, run `02_pickle_serialization.py` and `04_copying_objects.py` first.
+## 7) Важливо
+- `pickle` використовуємо тільки для trusted data.
