@@ -1,6 +1,10 @@
 # %% [markdown]
 # # 🐍 Python Fundamentals: Input/Output та Functions
 # 
+# **Canonical notebook role:** primary teaching notebook for Module 2.
+# 
+# **Baseline:** Python 3.10-3.12 (mainline). Python 3.13 preview topics are optional context only.
+# 
 # ## 📚 Зміст модуля
 # 
 # ### Частина 1: Input та Output
@@ -20,6 +24,15 @@
 # 6. Практичні приклади з використанням бібліотек
 # 
 # ---
+
+# %% [markdown]
+# ## 🔀 Навігація по маршрутах (Beginner / Advanced DS/DE)
+# 
+# - **Beginner route (primary for beginners):** `03_input_output.py` -> `04_functions.py` -> `05_strings.py` -> `07_practice_tasks.py`
+# - **Advanced DS/DE route (primary for technical groups):** `03_modern_input_output.py` -> `04_modern_functions.py` -> `05_modern_strings.py` -> `07_practice_ds_tasks.py`
+# - **Shared block for both routes:** `06_debugging.py`
+# 
+# Use one primary route per session; the second route is follow-up/self-study.
 
 # %% [markdown]
 # # 📤 Частина 1: Input та Output в Python
@@ -79,13 +92,13 @@ print("Четвертий")
 
 # %%
 # Виведення у файл
-with open('/home/claude/output_example.txt', 'w', encoding='utf-8') as f:
+with open('output/output_example.txt', 'w', encoding='utf-8') as f:
     print("Це виведення у файл", file=f)
     print("Можна виводити багато рядків", file=f)
     print("Дата:", "2025-01-15", file=f)
 
 # Читаємо, що записали
-with open('/home/claude/output_example.txt', 'r', encoding='utf-8') as f:
+with open('output/output_example.txt', 'r', encoding='utf-8') as f:
     content = f.read()
     print("\nВміст файлу:")
     print(content)
@@ -299,7 +312,7 @@ print("СТВОРЕННЯ ТЕСТОВИХ ФАЙЛІВ")
 print("=" * 80)
 
 # 1. Створення простого текстового файлу
-with open('/home/claude/user_data.txt', 'w', encoding='utf-8') as f:
+with open('output/user_data.txt', 'w', encoding='utf-8') as f:
     f.write("Олександр\n")
     f.write("28\n")
     f.write("Київ\n")
@@ -310,7 +323,7 @@ print("✅ Створено user_data.txt")
 # 2. Створення CSV файлу
 import csv
 
-with open('/home/claude/employees.csv', 'w', newline='', encoding='utf-8') as f:
+with open('output/employees.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
     writer.writerow(['Ім\'я', 'Вік', 'Місто', 'Зарплата'])
     writer.writerow(['Олександр', 28, 'Київ', 50000])
@@ -331,7 +344,7 @@ data = {
     ]
 }
 
-with open('/home/claude/users.json', 'w', encoding='utf-8') as f:
+with open('output/users.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
 print("✅ Створено users.json")
@@ -345,13 +358,13 @@ print("ЧИТАННЯ ТЕКСТОВОГО ФАЙЛУ")
 print("=" * 80)
 
 # Спосіб 1: Читання всього файлу
-with open('/home/claude/user_data.txt', 'r', encoding='utf-8') as f:
+with open('output/user_data.txt', 'r', encoding='utf-8') as f:
     content = f.read()
     print("Весь вміст файлу:")
     print(content)
 
 # Спосіб 2: Читання по рядках
-with open('/home/claude/user_data.txt', 'r', encoding='utf-8') as f:
+with open('output/user_data.txt', 'r', encoding='utf-8') as f:
     lines = f.readlines()
     name = lines[0].strip()
     age = int(lines[1].strip())
@@ -377,7 +390,7 @@ print("=" * 80)
 # Спосіб 1: Вбудований модуль csv
 import csv
 
-with open('/home/claude/employees.csv', 'r', encoding='utf-8') as f:
+with open('output/employees.csv', 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     print("Співробітники:")
     for row in reader:
@@ -404,7 +417,7 @@ print("ЧИТАННЯ CSV - pandas")
 print("=" * 80)
 
 # Читаємо CSV
-df = pd.read_csv('/home/claude/employees.csv')
+df = pd.read_csv('output/employees.csv')
 
 print("Повна таблиця:")
 print(df)
@@ -433,7 +446,7 @@ print("\n" + "=" * 80)
 print("ЧИТАННЯ JSON")
 print("=" * 80)
 
-with open('/home/claude/users.json', 'r', encoding='utf-8') as f:
+with open('output/users.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 print("Користувачі:")
@@ -501,7 +514,7 @@ def calculator_with_file(filename):
             print(f"{num1} {operation} {num2} = {result}")
 
 # Створюємо файл з операціями
-with open('/home/claude/calculations.txt', 'w') as f:
+with open('output/calculations.txt', 'w') as f:
     f.write("10 + 5\n")
     f.write("20 - 8\n")
     f.write("7 * 6\n")
@@ -509,7 +522,13 @@ with open('/home/claude/calculations.txt', 'w') as f:
     f.write("15 * 3\n")
 
 print("\nПідхід з файлом (можна обробити багато операцій):")
-calculator_with_file('/home/claude/calculations.txt')
+calculator_with_file('output/calculations.txt')
+
+# %% [markdown]
+# ## 🚀 Advanced DS/DE Extensions
+# 
+# The following sections are especially useful for advanced DS/DE groups (data processing, libraries, reusable patterns).
+# Beginner groups can treat this part as optional follow-up after core fundamentals.
 
 # %% [markdown]
 # ## 1.6 📊 Використання спеціалізованих бібліотек
@@ -553,7 +572,7 @@ print(f"Стандартне відхилення: {statistics.stdev(data):.2f}"
 from pathlib import Path
 
 print("\n📁 pathlib - Робота зі шляхами:")
-current_file = Path('/home/claude/output_example.txt')
+current_file = Path('output/output_example.txt')
 print(f"Існує: {current_file.exists()}")
 print(f"Розширення: {current_file.suffix}")
 print(f"Ім'я файлу: {current_file.name}")
@@ -1129,7 +1148,7 @@ def analyze_employees(filename):
     return stats
 
 # Використання
-stats = analyze_employees('/home/claude/employees.csv')
+stats = analyze_employees('output/employees.csv')
 print("\n📊 Статистика співробітників:")
 print(f"Всього співробітників: {stats['total_employees']}")
 print(f"Середній вік: {stats['average_age']:.1f} років")
@@ -1226,11 +1245,11 @@ Python підтримує різні парадигми програмуванн
 Python використовується для веб-розробки, аналізу даних та машинного навчання.
 """
 
-with open('/home/claude/test_text.txt', 'w', encoding='utf-8') as f:
+with open('output/test_text.txt', 'w', encoding='utf-8') as f:
     f.write(test_text)
 
 # Аналіз
-text_stats = analyze_text_file('/home/claude/test_text.txt')
+text_stats = analyze_text_file('output/test_text.txt')
 print("\n📝 Аналіз тексту:")
 print(f"Всього символів: {text_stats['total_characters']}")
 print(f"Всього слів: {text_stats['total_words']}")
@@ -1467,6 +1486,14 @@ print(f"Середнє: {calculate_average([1.5, 2.7, 3.9, 4.2]):.2f}")
 print(f"Користувач: {find_user(1)}")
 print(f"Користувач: {find_user(999)}")
 print(f"Довжина: {process_data([1, 2, 3, 4, 5])}")
+
+# %% [markdown]
+# ## ✅ Практика за маршрутами
+# 
+# - Beginner practice: `07_practice_tasks.py`
+# - Advanced DS/DE practice: `07_practice_ds_tasks.py`
+# 
+# Recommended class mode: solve 1 guided task + 1 independent task from the active route.
 
 # %% [markdown]
 # # 📚 Підсумок та Best Practices
